@@ -1,0 +1,174 @@
+/*---------- COLORS ----------*/
+$colorPrimary_1: #99E2D0;
+$colorPrimary_2: #008766;
+$colorPrimary_3: #89C8FA;
+$colorPrimary_4: #003A68;
+$colorPrimary_5: #9356DC;
+$colorPrimary_6: #FF79DA;
+$colorGreyscale_1: #000000;
+$colorGreyscale_2: #353535;
+$colorGreyscale_3: #7E7E7E;
+$colorGreyscale_4: #EAEAEA;
+$colorGreyscale_5: #FFFFFF;
+$colorGreyscale_6: #F6F6F6;
+$colorShadow_1: #00000026;
+$colorShadow_2: #00000040;
+
+/*---------- FONTS ----------*/
+@font-face {
+  font-family: Shrikhand;
+  src: url(../../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-display: swap;
+}
+
+$font_1_regular: Roboto;
+$font_2_bold: Shrikhand;
+
+/*---------- FONTS SIZE ----------*/
+$h1_textsize_desktop: 40px;
+$h1_textsize_mobile: 24px;
+
+$h2_textsize_desktop: 28px;
+$h2_textsize_mobile: 28px;
+
+$h3_textsize_desktop: 24px;
+$h3_textsize_mobile: 24px;
+
+$h4_textsize_desktop: 18px;
+$h4_textsize_mobile: 18px;
+
+$h5_textsize_desktop: 16px;
+$h5_textsize_mobile: 16px;
+
+/*----------  PARAGRAPH QUOTE  ----------*/
+$paragraphQuote_textsize_desktop: 24px;
+$paragraphQuote_textsize_mobile: 20px;
+
+$paragraphBig_textsize_desktop: 18px;
+
+$paragraphMedium_textsize_desktop: 17px;
+
+$paragraphSmall_textsize_desktop: 16px;
+
+$paragraphTiny_textsize_desktop: 11px;
+
+/*----------  LINK  ----------*/
+$linkBig_textsize_desktop: 18px;
+$linkMedium_textsize_desktop: 16px;
+$linkSmall_textsize_desktop: 14px;
+
+
+/*---------- BREAKPOINTS ----------*/
+$breakPoint_tablet: 1080px;
+$breakPoint_mobile: 700px;
+
+/*---------- RESPONSIVE ----------*/
+@mixin styleResponsive($size: 'mobile') {
+  @if $size == 'desktop' {
+    @media (width > #{$breakPoint_tablet}) {
+      @content;
+    }
+  } @else if $size == 'tablet' {
+    @media (#{$breakPoint_mobile} <= width <= #{$breakPoint_tablet}) {
+      @content;
+    }
+  } @else if $size == 'mobile' {
+    @media (width <= #{$breakPoint_mobile}) {
+      @content;
+    }
+  }
+  @if $size == 'wider-mobile' {
+    @media (width >= #{$breakPoint_mobile}) {
+      @content;
+    }
+  } @else if $size == 'smaller-desktop' {
+    @media (width <= #{$breakPoint_tablet}) {
+      @content;
+    }
+  }
+}
+
+/*----------  HEADING  ----------*/
+@mixin styleH($hx, $color: $colorGreyscale_1, $font: $font_1_bold) {
+  @if $hx== 'h1' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h1_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h1_textsize_mobile;
+    }
+  } @else if $hx == 'h2' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h2_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h2_textsize_mobile;
+    }
+  } @else if $hx == 'h3' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h3_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h3_textsize_mobile;
+    }
+  } @else if $hx == 'h4' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h4_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h4_textsize_mobile;
+    }
+  } @else if $hx == 'h5' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h5_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h5_textsize_mobile;
+    }
+  } @else if $hx == 'h6' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $h6_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $h6_textsize_mobile;
+    }
+  }
+
+  color: $color;
+  font-family: $font, sans-serif;
+}
+
+/*----------  PARAGRAPH  ----------*/
+@mixin styleP($px, $color: $colorGreyscale_1, $font: $font_1_regular) {
+  @if $px == 'quote' {
+    @media screen and (min-width: $breakPoint_mobile) {
+      font-size: $paragraphQuote_textsize_desktop;
+    }
+
+    @media screen and (max-width: $breakPoint_mobile) {
+      font-size: $paragraphQuote_textsize_mobile;
+    }
+  } @else if $px == 'big' {
+    font-size: $paragraphBig_textsize_desktop;
+  } @else if $px == 'medium' {
+    font-size: $paragraphMedium_textsize_desktop;
+  } @else if $px == 'small' {
+    font-size: $paragraphSmall_textsize_desktop;
+  } @else if $px == 'tiny' {
+    font-size: $paragraphTiny_textsize_desktop;
+  }
+
+  color: $color;
+  font-family: $font;
+}
