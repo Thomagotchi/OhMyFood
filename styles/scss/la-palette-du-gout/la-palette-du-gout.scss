@@ -1,0 +1,106 @@
+@import "../globals.scss";
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @include styleResponsive("smaller-desktop") {
+    box-shadow:0 2px 4px 0 $colorShadow_1;
+  }
+}
+
+.image-container {
+  // display: none;
+  width: 100%;
+  position: fixed;
+  top: 96px;
+  z-index: -999;
+  align-items: center;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include styleResponsive("desktop") {
+    height: 383px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  margin: 343px auto 0 auto;
+  background-color: $colorGreyscale_6;
+  max-width: 1055px;
+  border-radius: 40px 40px 0 0;
+  padding: 32px 16px 0 16px;
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: $colorGreyscale_2;
+  gap: 16px;
+
+  .omf-logo {
+    margin-top: auto;
+    width: 138px;
+    height: 27px;
+    font-weight: 400;
+    line-height: 26px;
+    @include styleH("h4", $colorGreyscale_5, $font_2_bold);
+  }
+
+  .link-container {
+    margin-top: auto;
+    display: flex;
+    gap: 7px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      height: fit-content;
+      line-height: 18.75px;
+      @include styleP("medium", $colorGreyscale_5, $font_1_regular);
+
+      &.style_1 {
+        width: 190px;
+
+        p {
+          font-weight: 500;
+        }
+      }
+
+      &.style_2 {
+        width: 130px;
+
+        p {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @include styleResponsive("desktop") {
+    padding: 30px 25px;
+    height: 117px;
+    flex-direction: row-reverse;
+    flex-start: end;
+  }
+
+  @include styleResponsive("smaller-desktop") {
+    padding: 22px 25px;
+    flex-direction: column;
+
+    .link-container {
+      flex-direction: column;
+    }
+  }
+}
