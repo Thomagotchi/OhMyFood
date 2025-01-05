@@ -1,0 +1,408 @@
+/*---------- COLORS ----------*/
+/*---------- FONTS ----------*/
+@font-face {
+  font-family: Shrikhand;
+  src: url(../../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-display: swap;
+}
+/*---------- FONTS SIZE ----------*/
+/*----------  PARAGRAPH QUOTE  ----------*/
+/*----------  LINK  ----------*/
+/*---------- BREAKPOINTS ----------*/
+/*---------- RESPONSIVE ----------*/
+/*----------  HEADING  ----------*/
+/*----------  PARAGRAPH  ----------*/
+.header {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media (width <= 1080px) {
+  .header {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 17px;
+  background-color: #EAEAEA;
+  color: #353535;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .location {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .location {
+    font-size: 16px;
+  }
+}
+@media (width <= 1080px) {
+  .location {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2509803922);
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  color: #000000;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .section-title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 39px 0 57px 0;
+  background-color: #F6F6F6;
+}
+.section-hero .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-hero .text-container .title {
+  font-weight: 700;
+  color: #000000;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .section-hero .text-container .title {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-hero .text-container .title {
+    font-size: 24px;
+  }
+}
+.section-hero .text-container .text {
+  font-weight: 300;
+  line-height: 21px;
+  margin-bottom: auto;
+  font-size: 18px;
+  color: #353535;
+  font-family: Roboto;
+}
+.section-hero .text-container .cta {
+  width: fit-content;
+  cursor: pointer;
+  padding: 15.5px 22.5px;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+@media (width >= 700px) {
+  .section-hero .text-container {
+    height: 179px;
+  }
+  .section-hero .text-container .title {
+    line-height: 47px;
+    margin-bottom: 18px;
+  }
+}
+@media (width <= 700px) {
+  .section-hero .text-container {
+    height: 191px;
+  }
+  .section-hero .text-container .title {
+    height: 68px;
+    max-width: 275px;
+  }
+  .section-hero .text-container .text {
+    max-width: 315px;
+  }
+}
+
+.section-fonctionnement {
+  display: flex;
+  flex-direction: column;
+  max-width: 1053px;
+  margin: 0 auto;
+  padding: 50px 0;
+  gap: 25px;
+}
+.section-fonctionnement .title {
+  color: #000000;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+}
+@media screen and (min-width: 700px) {
+  .section-fonctionnement .title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-fonctionnement .title {
+    font-size: 24px;
+  }
+}
+.section-fonctionnement .card-container {
+  display: flex;
+}
+.section-fonctionnement .card-container .card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 322px;
+  margin-left: 13px;
+  height: 72px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 20px;
+}
+.section-fonctionnement .card-container .card .number {
+  position: absolute;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  transform: translateX(-12px);
+}
+.section-fonctionnement .card-container .card i {
+  margin-left: 34px;
+}
+.section-fonctionnement .card-container .card p {
+  font-size: 16px;
+  color: #000000;
+  font-family: Roboto;
+  font-weight: 500;
+}
+.section-fonctionnement .card-container .card:not(.color) i {
+  color: #7E7E7E;
+}
+.section-fonctionnement .card-container .card.color i {
+  color: #9356DC;
+}
+@media (width > 1080px) {
+  .section-fonctionnement .card-container {
+    justify-content: space-between;
+  }
+  .section-fonctionnement .card-container .card {
+    gap: 27px;
+  }
+}
+@media (width <= 1080px) {
+  .section-fonctionnement {
+    margin: 0 auto;
+    padding: 48px 20px 72px 20px;
+  }
+  .section-fonctionnement .card-container {
+    flex-direction: column;
+    gap: 25px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .section-fonctionnement .card-container .card {
+    gap: 27px;
+  }
+}
+
+.section-restaurants {
+  background-color: #F6F6F6;
+}
+.section-restaurants .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  gap: 28px;
+}
+.section-restaurants .wrapper .section-title {
+  display: flex;
+  color: #000000;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .section-restaurants .wrapper .section-title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-restaurants .wrapper .section-title {
+    font-size: 24px;
+  }
+}
+.section-restaurants .wrapper .card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 50px;
+}
+.section-restaurants .wrapper .card-container .card {
+  max-width: 490px;
+  max-height: 251px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.section-restaurants .wrapper .card-container .card .image-container {
+  position: relative;
+  height: 174px;
+  overflow: hidden;
+}
+.section-restaurants .wrapper .card-container .card .image-container img {
+  width: 498.65px;
+  object-fit: cover;
+}
+.section-restaurants .wrapper .card-container .card .image-container .new-tag {
+  position: absolute;
+  display: flex;
+  top: 13px;
+  right: 18px;
+  width: 80px;
+  padding: 6px 0;
+  border-radius: 2px;
+  justify-content: center;
+  background-color: #99E2D0;
+  font-weight: 500;
+  font-size: 14px;
+  color: #008766;
+  font-family: Roboto;
+}
+.section-restaurants .wrapper .card-container .card .caption {
+  align-items: center;
+  background-color: white;
+  height: 80px;
+  padding: 0 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-restaurants .wrapper .card-container .card .caption .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.section-restaurants .wrapper .card-container .card .caption .text-container .title {
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .section-restaurants .wrapper .card-container .card .caption .text-container .title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section-restaurants .wrapper .card-container .card .caption .text-container .title {
+    font-size: 18px;
+  }
+}
+.section-restaurants .wrapper .card-container .card .caption .text-container .restaurant-location {
+  font-weight: 300;
+  line-height: 20px;
+  font-size: 16px;
+  color: #000000;
+  font-family: Roboto;
+}
+.section-restaurants .wrapper .card-container .card .caption i {
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  background-color: #353535;
+  gap: 16px;
+}
+.footer .omf-logo {
+  margin-top: auto;
+  width: 138px;
+  height: 27px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-family: Shrikhand, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .footer .omf-logo {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer .omf-logo {
+    font-size: 18px;
+  }
+}
+.footer .link-container {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+.footer .link-container .link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: fit-content;
+  line-height: 18.75px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+.footer .link-container .link.style_1 {
+  width: 190px;
+}
+.footer .link-container .link.style_1 p {
+  font-weight: 500;
+}
+.footer .link-container .link.style_2 {
+  width: 130px;
+}
+.footer .link-container .link.style_2 p {
+  font-weight: 400;
+}
+@media (width > 1080px) {
+  .footer {
+    padding: 30px 25px;
+    height: 117px;
+    flex-direction: row-reverse;
+    flex-start: end;
+  }
+}
+@media (width <= 1080px) {
+  .footer {
+    padding: 22px 25px;
+    flex-direction: column;
+  }
+  .footer .link-container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -6,29 +6,27 @@
   display: flex;
   justify-content: center;
   position: relative;
-
   @include styleResponsive("smaller-desktop") {
     box-shadow:0 2px 4px 0 $colorShadow_1;
   }
 }
 
 .location {
-  @include styleH(h5, $colorGreyscale_2, $font_1_regular);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
   gap: 17px;
   background-color: $colorGreyscale_4;
-
+  @include styleH("h5", $colorGreyscale_2, $font_1_regular);
   @include styleResponsive("smaller-desktop") {
     box-shadow:0 4px 4px 0 $colorShadow_2;
   }
 }
 
 .section-title {
-  @include styleH(h1, $colorGreyscale_1, $font_1_regular);
   font-weight: 700;
+  @include styleH("h1");
 }
 
 .section-hero {
@@ -43,22 +41,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .title {
+      font-weight: 700;
+      @include styleH("h1");
+    }
   
     .text {
-      @include styleP("big", $colorGreyscale_2, $font_1_regular);
       font-weight: 300;
       line-height: 21px;
       margin-bottom: auto;
+      @include styleP("big", $colorGreyscale_2, $font_1_regular);
     }
   
     .cta {
       width: fit-content;
-      @include styleP("small", $colorGreyscale_5, $font_1_regular);
       cursor: pointer;
       padding: 15.5px 22.5px;
       border-radius: 25px;
       background: linear-gradient(193.33deg, $colorPrimary_5 -11.44%, $colorPrimary_6 123.93%);
       box-shadow: 0 4px 10px 0 $colorShadow_2;
+      @include styleP("medium", $colorGreyscale_5, $font_1_regular);
     }
   }
 
@@ -66,10 +69,10 @@
     .text-container {
     height: 179px;
 
-    .title {
-      line-height: 47px;
-      margin-bottom: 18px;
-    }
+      .title {
+        line-height: 47px;
+        margin-bottom: 18px;
+      }
     }
   }
 
@@ -80,7 +83,6 @@
     .title {
       height: 68px;
       max-width: 275px;
-      // line-height: 28px;
     }
 
     .text {
@@ -99,13 +101,12 @@
   gap: 25px;
 
   .title {
-    @include styleH(h3, $colorGreyscale_1, $font_1_regular);
+    @include styleH("h3");
     font-weight: 700;
   }
 
   .card-container {
     display: flex;
-    width: 100%;
 
     .card {
       display: flex;
@@ -138,7 +139,7 @@
       }
 
       p {
-        @include styleP("small", $colorGreyscale_1, $font_1_regular);
+        @include styleP("medium", $colorGreyscale_1, $font_1_regular);
         font-weight: 500;
       }
 
@@ -173,6 +174,8 @@
     .card-container {
       flex-direction: column;
       gap: 25px;
+      width: fit-content;
+      margin: 0 auto;
 
       .card {
         gap: 27px;
@@ -184,51 +187,151 @@
 .section-restaurants {
   background-color: $colorGreyscale_6;
 
-  .card-container {
+  .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    gap: 28px;
 
-    .card {
-      max-width: 490px;
-      max-height: 251px;
-      border-radius: 15px;
-      overflow: hidden;
-
-      .image-container {
-        height: 174px;
-
-        img {
-          width: 100%;
-          object-fit: cover;
+    .section-title {
+      display: flex;
+      @include styleH("h3");
+    }
+  
+    .card-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 100px;
+      row-gap: 50px;
+  
+      .card {
+        max-width: 490px;
+        max-height: 251px;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+  
+        .image-container {
+          position: relative;
+          height: 174px;
+          overflow: hidden;
+  
+          img {
+            width: 498.65px;
+            object-fit: cover;
+          }
+          .new-tag {
+            position: absolute;
+            display: flex;
+            top: 13px;
+            right: 18px;
+            width: 80px;
+            padding: 6px 0;
+            border-radius: 2px;
+            justify-content: center;
+            background-color: $colorPrimary_1;
+            font-weight: 500;
+            @include styleP("small", $colorPrimary_2);
+          }
         }
-
-        .new-tag {
-          display: none;
-        }
-      }
-
-      .caption {
-        align-items: center;
-        background-color: white;
-        height: 60px;
-        display: flex;
-        justify-content: space-between;
-
-        .text-container {
+  
+        .caption {
+          align-items: center;
+          background-color: white;
+          height: 80px;
+          padding: 0 18px;
           display: flex;
-          flex-direction: column;
-
-          .title {
-            @include styleH(h4, $colorGreyscale_1, $font_1_regular);
-            line-height: 21px;
-            font-weight: 700;
+          justify-content: space-between;
+  
+          .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+  
+            .title {
+              line-height: 21px;
+              font-weight: 700;
+              @include styleH("h4");
+            }
+  
+            .restaurant-location {
+              font-weight: 300;
+              line-height: 20px;
+              @include styleP("medium");
+            }
           }
-
-          .restaurant-location {
-            @include styleP("medium", $colorGreyscale_1, $font_1_regular);
+  
+          i {
+            cursor: pointer;
           }
         }
       }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: $colorGreyscale_2;
+  gap: 16px;
+
+  .omf-logo {
+    margin-top: auto;
+    width: 138px;
+    height: 27px;
+    font-weight: 400;
+    line-height: 26px;
+    @include styleH("h4", $colorGreyscale_5, $font_2_bold);
+  }
+
+  .link-container {
+    margin-top: auto;
+    display: flex;
+    gap: 7px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      height: fit-content;
+      line-height: 18.75px;
+      @include styleP("medium", $colorGreyscale_5, $font_1_regular);
+
+      &.style_1 {
+        width: 190px;
+
+        p {
+          font-weight: 500;
+        }
+      }
+
+      &.style_2 {
+        width: 130px;
+
+        p {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  @include styleResponsive("desktop") {
+    padding: 30px 25px;
+    height: 117px;
+    flex-direction: row-reverse;
+    flex-start: end;
+  }
+
+  @include styleResponsive("smaller-desktop") {
+    padding: 22px 25px;
+    flex-direction: column;
+
+    .link-container {
+      flex-direction: column;
     }
   }
 }
