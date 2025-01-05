@@ -51,9 +51,9 @@ $paragraphQuote_textsize_mobile: 20px;
 
 $paragraphBig_textsize_desktop: 18px;
 
-$paragraphMedium_textsize_desktop: 17px;
+$paragraphMedium_textsize_desktop: 16px;
 
-$paragraphSmall_textsize_desktop: 16px;
+$paragraphSmall_textsize_desktop: 14px;
 
 $paragraphTiny_textsize_desktop: 11px;
 
@@ -94,7 +94,7 @@ $breakPoint_mobile: 700px;
 }
 
 /*----------  HEADING  ----------*/
-@mixin styleH($hx, $color: $colorGreyscale_1, $font: $font_1_bold) {
+@mixin styleH($hx, $color: $colorGreyscale_1, $font: $font_1_regular) {
   @if $hx== 'h1' {
     @media screen and (min-width: $breakPoint_mobile) {
       font-size: $h1_textsize_desktop;
