@@ -10,76 +10,135 @@
     <!-- Font Awesome import -->
     <script src="https://kit.fontawesome.com/b78ed65e3d.js" crossorigin="anonymous"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/compiled/resets.css">
-    <link rel="stylesheet" href="./styles/compiled/resets.css.map">
-    <link rel="stylesheet" defer href="./styles/compiled/globals.css">
-    <link rel="stylesheet" defer href="./styles/compiled/globals.css.map">
-    <link rel="stylesheet" defer href="./styles/compiled/home/home.css">
-    <link rel="stylesheet" defer href="./styles/compiled/home/home.css.map">
+    <link rel="stylesheet" href="./styles/scss/resets.css">
+    <link rel="stylesheet" href="./styles/scss/resets.css.map">
+    <link rel="stylesheet" defer href="./styles/scss/globals.css">
+    <link rel="stylesheet" defer href="./styles/scss/globals.css.map">
+    <link rel="stylesheet" defer href="./styles/scss/home/home.css">
+    <link rel="stylesheet" defer href="./styles/scss/home/home.css.map">
 </head>
 
 <body>
-        <header class="header">
-            <!-- Logo -->
-            <img src="/assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" class="logo">
-        </header>
-        <main>
-            <section class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Paris, Belleville</p>
-            </section>
-            <section class="section-hero">
-                <div class="text-container">
-                    <!-- Hero Title -->                     
-                    <h1 class="title">Réservez le menu qui vous convient</h1>
-                    <!-- Text -->
-                    <p class="text">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
-                    <!-- CTA Button -->
-                    <button class="cta">Explorer nos restaurants</button>
-                </div>
-            </section>
-            <section class="section-fonctionnement">
-                <h3 class="section-title">Fonctionnement</h3>
-                <ul class="card-container">
-                    <li class="card">
-                        <div class="number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button"></i>
-                        <p>Choisissez un restaurants</p>
-                    </li>
-                    <li class="card">
-                        <div class="number">2</div>
-                        <i class="fa-solid fa-list-ul"></i>
-                        <p>Composez votre menu</p>
-                    </li>
-                    <li class="card color">
-                        <div class="number">3</div>
-                        <i class="fa-solid fa-store"></i>
-                        <p>Dégustez au restaurant</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="section-restaurants">
-                <h3 class="section-title">Restaurants</h3>
-                <ul class="card-container">
-                    <li class="card">
-                        <div class="image-container">
-                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                            <p class="new-tag">Nouveau</p>
-                        </div>
-                        <div class="caption">
-                            <div class="text-container">
-                                <h4 class="title">La palette du goût</h4>
-                                <p class="restaurant-location">Ménilmontant</p>
-                            </div>
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </main>
+  <header class="header">
+    <!-- Logo -->
+    <img src="/assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" class="logo">
+  </header>
+  <main>
+    <section class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      <p>Paris, Belleville</p>
+    </section>
+    <section class="section-hero">
+      <div class="text-container">
+        <!-- Hero Title -->                     
+        <h1 class="title">Réservez le menu qui vous convient</h1>
+        <!-- Text -->
+        <p class="text">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
+        <!-- CTA Button -->
+        <button class="cta">Explorer nos restaurants</button>
+      </div>
+    </section>
+    <section class="section-fonctionnement">
+      <h3 class="section-title">Fonctionnement</h3>
+      <ul class="card-container">
+        <li class="card">
+          <div class="number">1</div>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <p>Choisissez un restaurants</p>
+        </li>
+        <li class="card">
+          <div class="number">2</div>
+          <i class="fa-solid fa-list-ul"></i>
+          <p>Composez votre menu</p>
+        </li>
+        <li class="card color">
+          <div class="number">3</div>
+          <i class="fa-solid fa-store"></i>
+          <p>Dégustez au restaurant</p>
+        </li>
+      </ul>
+    </section>
+    <section class="section-restaurants">
+      <div class="wrapper">
+        <h3 class="section-title">Restaurants</h3>
+        <div class="card-container">
+          <a class="card" href="./la-palette-du-gout.html">
+            <div class="image-container">
+              <p class="new-tag">Nouveau</p>
+              <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+            </div>
+            <div class="caption">
+              <div class="text-container">
+                <h4 class="title">La palette du goût</h4>
+                <p class="restaurant-location">Ménilmontant</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </a>
+          <a class="card">
+            <div class="image-container">
+              <p class="new-tag">Nouveau</p>
+              <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+            </div>
+            <div class="caption">
+              <div class="text-container">
+                <h4 class="title">La note enchantée</h4>
+                <p class="restaurant-location">Charonne</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </a>
+          <a class="card">
+            <div class="image-container">
+              <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
+            </div>
+            <div class="caption">
+              <div class="text-container">
+                  <h4 class="title">À la française</h4>
+                  <p class="restaurant-location">Cité Rouge
+                  </p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </a>
+          <a class="card">
+            <div class="image-container">
+              <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+            </div>
+            <div class="caption">
+              <div class="text-container">
+                  <h4 class="title">Le délice des sens</h4>
+                  <p class="restaurant-location">Folie-Méricourt</p>
+              </div>
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <!-- Footer du site séparer en trois colonnes -->
-        <footer class="footer">
-        </footer>
+  <!-- Footer du site séparer en trois colonnes -->
+  <footer class="footer">
+    <h4 class="omf-logo">
+      ohmyfood
+    </h4>
+    <div class="link-container">
+      <a class="link style_1" href="">
+        <i class="fa-solid fa-utensils fa-xs"></i>
+        <p>Proposer un restaurant</p>
+      </a>
+      <a class="link style_1" href="">
+        <i class="fa-solid fa-handshake-angle fa-xs"></i>
+        <p>Devenir partenaire</p>
+      </a>
+      <a class="link style_2" href="">
+        <p>Mentions légales</p>
+      </a>
+      <a class="link style_2" href="">
+        <p>Contact</p>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
