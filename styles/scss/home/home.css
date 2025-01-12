@@ -17,6 +17,182 @@
 /*---------- RESPONSIVE ----------*/
 /*----------  HEADING  ----------*/
 /*----------  PARAGRAPH  ----------*/
+@keyframes spinner-animation {
+  0% {
+    opacity: 0.1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes spinner-fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes disable-scroll {
+  0% {
+    height: 100%;
+    overflow-y: hidden;
+  }
+  100% {
+    height: fit-content;
+    overflow-y: unset;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-slide-in {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body {
+  height: 100%;
+  overflow-y: hidden;
+  animation: disable-scroll 0.1s ease-in-out 4s forwards;
+}
+
+.spinner-container {
+  position: absolute;
+  top: calc(50vh - 40px);
+  left: calc(50vw - 40px);
+  z-index: 2000;
+  animation: spinner-fade-out 2s ease-in-out 2s forwards;
+}
+.spinner-container .spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+}
+.spinner-container .spinner > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px;
+}
+.spinner-container .spinner > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(40px) rotate(0deg);
+}
+.spinner-container .spinner > *:nth-of-type(2) {
+  transform: rotate(36deg) translate(40px) rotate(-36deg);
+}
+.spinner-container .spinner > *:nth-of-type(3) {
+  transform: rotate(72deg) translate(40px) rotate(-72deg);
+}
+.spinner-container .spinner > *:nth-of-type(4) {
+  transform: rotate(108deg) translate(40px) rotate(-108deg);
+}
+.spinner-container .spinner > *:nth-of-type(5) {
+  transform: rotate(144deg) translate(40px) rotate(-144deg);
+}
+.spinner-container .spinner > *:nth-of-type(6) {
+  transform: rotate(180deg) translate(40px) rotate(-180deg);
+}
+.spinner-container .spinner > *:nth-of-type(7) {
+  transform: rotate(216deg) translate(40px) rotate(-216deg);
+}
+.spinner-container .spinner > *:nth-of-type(8) {
+  transform: rotate(252deg) translate(40px) rotate(-252deg);
+}
+.spinner-container .spinner > *:nth-of-type(9) {
+  transform: rotate(288deg) translate(40px) rotate(-288deg);
+}
+.spinner-container .spinner > *:nth-of-type(10) {
+  transform: rotate(324deg) translate(40px) rotate(-324deg);
+}
+.spinner-container .spinner div {
+  opacity: 0.1;
+  border-radius: 50%;
+  background-color: white;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 200ms) infinite;
+}
+.spinner-container .spinner div:nth-of-type(1) {
+  animation-delay: calc(1 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(2) {
+  animation-delay: calc(2 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(3) {
+  animation-delay: calc(3 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(4) {
+  animation-delay: calc(4 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(5) {
+  animation-delay: calc(5 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(6) {
+  animation-delay: calc(6 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(7) {
+  animation-delay: calc(7 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(8) {
+  animation-delay: calc(8 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(9) {
+  animation-delay: calc(9 * 0.2s);
+}
+.spinner-container .spinner div:nth-of-type(10) {
+  animation-delay: calc(10 * 0.2s);
+}
+
+.spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background-color: black;
+  animation: spinner-fade-out 2s ease-in-out 2s forwards;
+}
+
 .header {
   width: 100%;
   padding: 15px 0;
@@ -109,15 +285,33 @@
   font-family: Roboto;
 }
 .section-hero .text-container .cta {
+  position: relative;
   width: fit-content;
   cursor: pointer;
-  padding: 15.5px 22.5px;
   border-radius: 25px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
   font-size: 16px;
   color: #FFFFFF;
   font-family: Roboto;
+}
+.section-hero .text-container .cta .overlay {
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.section-hero .text-container .cta p {
+  padding: 15.5px 22.5px;
+}
+.section-hero .text-container .cta:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.section-hero .text-container .cta:hover .overlay {
+  opacity: 0.15;
 }
 @media (width >= 700px) {
   .section-hero .text-container {
@@ -149,18 +343,18 @@
   padding: 50px 0;
   gap: 25px;
 }
-.section-fonctionnement .title {
+.section-fonctionnement .section-title {
   color: #000000;
   font-family: Roboto, sans-serif;
   font-weight: 700;
 }
 @media screen and (min-width: 700px) {
-  .section-fonctionnement .title {
+  .section-fonctionnement .section-title {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 700px) {
-  .section-fonctionnement .title {
+  .section-fonctionnement .section-title {
     font-size: 24px;
   }
 }
@@ -170,8 +364,7 @@
 .section-fonctionnement .card-container .card {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 322px;
+  width: calc(100% - 13px);
   margin-left: 13px;
   height: 72px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
@@ -208,6 +401,16 @@
   color: #9356DC;
 }
 @media (width > 1080px) {
+  .section-fonctionnement .card-container .card {
+    max-width: 322px;
+  }
+}
+@media (700px <= width <= 1080px) {
+  .section-fonctionnement .card-container .card {
+    max-width: 440px;
+  }
+}
+@media (width > 1080px) {
   .section-fonctionnement .card-container {
     justify-content: space-between;
   }
@@ -223,11 +426,10 @@
   .section-fonctionnement .card-container {
     flex-direction: column;
     gap: 25px;
-    width: fit-content;
-    margin: 0 auto;
   }
   .section-fonctionnement .card-container .card {
     gap: 27px;
+    margin: 0 auto;
   }
 }
 
@@ -265,23 +467,26 @@
   column-gap: 100px;
   row-gap: 50px;
 }
-.section-restaurants .wrapper .card-container .card {
+.section-restaurants .wrapper .card-container .card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: 490px;
   max-height: 251px;
   margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
 }
-.section-restaurants .wrapper .card-container .card .image-container {
+.section-restaurants .wrapper .card-container .card-wrapper .card .image-container {
   position: relative;
   height: 174px;
   overflow: hidden;
 }
-.section-restaurants .wrapper .card-container .card .image-container img {
+.section-restaurants .wrapper .card-container .card-wrapper .card .image-container img {
   width: 498.65px;
   object-fit: cover;
 }
-.section-restaurants .wrapper .card-container .card .image-container .new-tag {
+.section-restaurants .wrapper .card-container .card-wrapper .card .image-container .new-tag {
   position: absolute;
   display: flex;
   top: 13px;
@@ -296,7 +501,7 @@
   color: #008766;
   font-family: Roboto;
 }
-.section-restaurants .wrapper .card-container .card .caption {
+.section-restaurants .wrapper .card-container .card-wrapper .card .caption {
   align-items: center;
   background-color: white;
   height: 80px;
@@ -304,36 +509,52 @@
   display: flex;
   justify-content: space-between;
 }
-.section-restaurants .wrapper .card-container .card .caption .text-container {
+.section-restaurants .wrapper .card-container .card-wrapper .card .caption .text-container {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.section-restaurants .wrapper .card-container .card .caption .text-container .title {
+.section-restaurants .wrapper .card-container .card-wrapper .card .caption .text-container .title {
   line-height: 21px;
   font-weight: 700;
   color: #000000;
   font-family: Roboto, sans-serif;
 }
 @media screen and (min-width: 700px) {
-  .section-restaurants .wrapper .card-container .card .caption .text-container .title {
+  .section-restaurants .wrapper .card-container .card-wrapper .card .caption .text-container .title {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 700px) {
-  .section-restaurants .wrapper .card-container .card .caption .text-container .title {
+  .section-restaurants .wrapper .card-container .card-wrapper .card .caption .text-container .title {
     font-size: 18px;
   }
 }
-.section-restaurants .wrapper .card-container .card .caption .text-container .restaurant-location {
+.section-restaurants .wrapper .card-container .card-wrapper .card .caption .text-container .restaurant-location {
   font-weight: 300;
   line-height: 20px;
   font-size: 16px;
   color: #000000;
   font-family: Roboto;
 }
-.section-restaurants .wrapper .card-container .card .caption i {
+.section-restaurants .wrapper .card-container .card-wrapper .heart {
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 200;
   cursor: pointer;
+}
+.section-restaurants .wrapper .card-container .card-wrapper .heart input {
+  display: none;
+}
+.section-restaurants .wrapper .card-container .card-wrapper .heart:hover i {
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 .footer {
