@@ -1,0 +1,1225 @@
+/*---------- COLORS ----------*/
+/*---------- FONTS ----------*/
+@font-face {
+  font-family: Shrikhand;
+  src: url(../../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+  font-display: swap;
+}
+/*---------- FONTS SIZE ----------*/
+/*----------  PARAGRAPH QUOTE  ----------*/
+/*----------  LINK  ----------*/
+/*---------- BREAKPOINTS ----------*/
+/*---------- RESPONSIVE ----------*/
+/*----------  HEADING  ----------*/
+/*----------  PARAGRAPH  ----------*/
+@keyframes spinner-animation {
+  0% {
+    opacity: 0.1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes spinner-fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes disable-scroll {
+  0% {
+    height: 100%;
+    overflow-y: hidden;
+  }
+  100% {
+    height: fit-content;
+    overflow-y: unset;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-slide-in {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1490196078);
+}
+.header .back-arrow {
+  position: absolute;
+  left: 24px;
+  transition: opacity 150ms ease-out;
+}
+.header .back-arrow:hover {
+  opacity: 0.6;
+}
+@media (width > 1080px) {
+  .header {
+    padding: 31px 0;
+    height: 96px;
+  }
+}
+@media (width <= 1080px) {
+  .header {
+    padding: 15px 0;
+  }
+}
+
+.image-container {
+  width: 100%;
+  position: absolute;
+  z-index: -999;
+  align-items: center;
+  overflow: hidden;
+}
+.image-container img {
+  height: 100%;
+  width: 100%;
+  scale: 1;
+  object-fit: cover;
+}
+@media (width > 1080px) {
+  .image-container {
+    height: 383px;
+    top: 96px;
+  }
+}
+@media (width <= 1080px) {
+  .image-container {
+    height: 275px;
+    top: 64px;
+  }
+}
+
+.menu {
+  display: flex;
+  background-color: #F6F6F6;
+  max-width: 1055px;
+  border-radius: 40px 40px 0 0;
+  padding: 32px 16px 40px 16px;
+}
+.menu .wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu .wrapper .title-container {
+  display: flex;
+  gap: 24px;
+  color: #000000;
+  font-family: Shrikhand, sans-serif;
+}
+.menu .wrapper .title-container .heart {
+  cursor: pointer;
+}
+.menu .wrapper .title-container .heart input {
+  display: none;
+}
+.menu .wrapper .title-container .heart:hover i {
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+@media screen and (min-width: 700px) {
+  .menu .wrapper .title-container {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menu .wrapper .title-container {
+    font-size: 28px;
+  }
+}
+@media (width > 1080px) {
+  .menu .wrapper .title-container {
+    margin: 0 auto;
+  }
+}
+@media (width >= 700px) {
+  .menu .wrapper .title-container {
+    margin: 0 auto;
+  }
+}
+.menu .wrapper .menu-section {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  opacity: 0;
+  animation: fade-in 300ms ease-in forwards;
+  animation: fade-in 300ms ease-in forwards;
+  animation: fade-in 300ms ease-in forwards;
+  animation: fade-in 300ms ease-in forwards;
+}
+.menu .wrapper .menu-section:nth-of-type(1) {
+  animation-delay: calc(1 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section:nth-of-type(2) {
+  animation-delay: calc(2 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section:nth-of-type(3) {
+  animation-delay: calc(3 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section:nth-of-type(4) {
+  animation-delay: calc(4 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section input {
+  display: none;
+}
+.menu .wrapper .menu-section .menu-title {
+  margin: 40px 0 12px 0;
+}
+.menu .wrapper .menu-section .menu-title .title {
+  line-height: 18px;
+  font-weight: 300;
+  color: #000000;
+  font-family: Roboto, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .menu .wrapper .menu-section .menu-title .title {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menu .wrapper .menu-section .menu-title .title {
+    font-size: 16px;
+  }
+}
+.menu .wrapper .menu-section .menu-title .underline {
+  margin-top: 6px;
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+}
+.menu .wrapper .menu-section .menu-item {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.menu .wrapper .menu-section .menu-item .text-container {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0 14px 14px;
+  height: 69px;
+  width: calc(100% - 114px);
+  gap: 5px;
+  flex-grow: 2;
+  height: fit-content;
+}
+.menu .wrapper .menu-section .menu-item .text-container .title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 18px;
+  color: #000000;
+  font-family: Roboto;
+}
+.menu .wrapper .menu-section .menu-item .text-container .item-description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  line-height: 17px;
+  font-size: 14px;
+  color: #000000;
+  font-family: Roboto;
+}
+.menu .wrapper .menu-section .menu-item .price {
+  position: relative;
+  padding: 0 15px 14px 15px;
+  margin-top: auto;
+  margin-left: auto;
+  font-size: 14px;
+  color: #000000;
+  font-family: Roboto;
+}
+.menu .wrapper .menu-section .menu-item .check {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 0;
+  color: #FFFFFF;
+  background-color: #99E2D0;
+  transition: flex 200ms ease-in-out;
+}
+@media (width >= 700px) {
+  .menu .wrapper .menu-section .menu-item {
+    width: 634px;
+  }
+}
+.menu .wrapper .menu-section .menu-card {
+  cursor: pointer;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+  animation: fade-in-slide-in 500ms forwards;
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(1) {
+  animation-delay: calc(1 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(2) {
+  animation-delay: calc(2 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(3) {
+  animation-delay: calc(3 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(4) {
+  animation-delay: calc(4 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(5) {
+  animation-delay: calc(5 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(6) {
+  animation-delay: calc(6 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(7) {
+  animation-delay: calc(7 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(8) {
+  animation-delay: calc(8 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(9) {
+  animation-delay: calc(9 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(10) {
+  animation-delay: calc(10 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(11) {
+  animation-delay: calc(11 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(12) {
+  animation-delay: calc(12 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(13) {
+  animation-delay: calc(13 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(14) {
+  animation-delay: calc(14 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(15) {
+  animation-delay: calc(15 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(16) {
+  animation-delay: calc(16 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(17) {
+  animation-delay: calc(17 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(18) {
+  animation-delay: calc(18 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(19) {
+  animation-delay: calc(19 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(20) {
+  animation-delay: calc(20 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(21) {
+  animation-delay: calc(21 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(22) {
+  animation-delay: calc(22 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(23) {
+  animation-delay: calc(23 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(24) {
+  animation-delay: calc(24 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(25) {
+  animation-delay: calc(25 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(26) {
+  animation-delay: calc(26 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(27) {
+  animation-delay: calc(27 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(28) {
+  animation-delay: calc(28 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(29) {
+  animation-delay: calc(29 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(30) {
+  animation-delay: calc(30 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(31) {
+  animation-delay: calc(31 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(32) {
+  animation-delay: calc(32 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(33) {
+  animation-delay: calc(33 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(34) {
+  animation-delay: calc(34 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(35) {
+  animation-delay: calc(35 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(36) {
+  animation-delay: calc(36 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(37) {
+  animation-delay: calc(37 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(38) {
+  animation-delay: calc(38 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(39) {
+  animation-delay: calc(39 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(40) {
+  animation-delay: calc(40 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(41) {
+  animation-delay: calc(41 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(42) {
+  animation-delay: calc(42 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(43) {
+  animation-delay: calc(43 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(44) {
+  animation-delay: calc(44 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(45) {
+  animation-delay: calc(45 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(46) {
+  animation-delay: calc(46 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(47) {
+  animation-delay: calc(47 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(48) {
+  animation-delay: calc(48 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(49) {
+  animation-delay: calc(49 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(50) {
+  animation-delay: calc(50 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(51) {
+  animation-delay: calc(51 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(52) {
+  animation-delay: calc(52 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(53) {
+  animation-delay: calc(53 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(54) {
+  animation-delay: calc(54 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(55) {
+  animation-delay: calc(55 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(56) {
+  animation-delay: calc(56 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(57) {
+  animation-delay: calc(57 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(58) {
+  animation-delay: calc(58 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(59) {
+  animation-delay: calc(59 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(60) {
+  animation-delay: calc(60 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(61) {
+  animation-delay: calc(61 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(62) {
+  animation-delay: calc(62 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(63) {
+  animation-delay: calc(63 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(64) {
+  animation-delay: calc(64 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(65) {
+  animation-delay: calc(65 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(66) {
+  animation-delay: calc(66 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(67) {
+  animation-delay: calc(67 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(68) {
+  animation-delay: calc(68 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(69) {
+  animation-delay: calc(69 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(70) {
+  animation-delay: calc(70 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(71) {
+  animation-delay: calc(71 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(72) {
+  animation-delay: calc(72 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(73) {
+  animation-delay: calc(73 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(74) {
+  animation-delay: calc(74 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(75) {
+  animation-delay: calc(75 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(76) {
+  animation-delay: calc(76 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(77) {
+  animation-delay: calc(77 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(78) {
+  animation-delay: calc(78 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(79) {
+  animation-delay: calc(79 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(80) {
+  animation-delay: calc(80 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(81) {
+  animation-delay: calc(81 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(82) {
+  animation-delay: calc(82 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(83) {
+  animation-delay: calc(83 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(84) {
+  animation-delay: calc(84 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(85) {
+  animation-delay: calc(85 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(86) {
+  animation-delay: calc(86 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(87) {
+  animation-delay: calc(87 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(88) {
+  animation-delay: calc(88 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(89) {
+  animation-delay: calc(89 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(90) {
+  animation-delay: calc(90 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(91) {
+  animation-delay: calc(91 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(92) {
+  animation-delay: calc(92 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(93) {
+  animation-delay: calc(93 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(94) {
+  animation-delay: calc(94 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(95) {
+  animation-delay: calc(95 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(96) {
+  animation-delay: calc(96 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(97) {
+  animation-delay: calc(97 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(98) {
+  animation-delay: calc(98 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(99) {
+  animation-delay: calc(99 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(100) {
+  animation-delay: calc(100 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(101) {
+  animation-delay: calc(101 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(102) {
+  animation-delay: calc(102 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(103) {
+  animation-delay: calc(103 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(104) {
+  animation-delay: calc(104 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(105) {
+  animation-delay: calc(105 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(106) {
+  animation-delay: calc(106 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(107) {
+  animation-delay: calc(107 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(108) {
+  animation-delay: calc(108 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(109) {
+  animation-delay: calc(109 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(110) {
+  animation-delay: calc(110 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(111) {
+  animation-delay: calc(111 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(112) {
+  animation-delay: calc(112 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(113) {
+  animation-delay: calc(113 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(114) {
+  animation-delay: calc(114 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(115) {
+  animation-delay: calc(115 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(116) {
+  animation-delay: calc(116 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(117) {
+  animation-delay: calc(117 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(118) {
+  animation-delay: calc(118 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(119) {
+  animation-delay: calc(119 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(120) {
+  animation-delay: calc(120 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(121) {
+  animation-delay: calc(121 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(122) {
+  animation-delay: calc(122 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(123) {
+  animation-delay: calc(123 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(124) {
+  animation-delay: calc(124 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(125) {
+  animation-delay: calc(125 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(126) {
+  animation-delay: calc(126 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(127) {
+  animation-delay: calc(127 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(128) {
+  animation-delay: calc(128 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(129) {
+  animation-delay: calc(129 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(130) {
+  animation-delay: calc(130 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(131) {
+  animation-delay: calc(131 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(132) {
+  animation-delay: calc(132 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(133) {
+  animation-delay: calc(133 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(134) {
+  animation-delay: calc(134 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(135) {
+  animation-delay: calc(135 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(136) {
+  animation-delay: calc(136 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(137) {
+  animation-delay: calc(137 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(138) {
+  animation-delay: calc(138 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(139) {
+  animation-delay: calc(139 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(140) {
+  animation-delay: calc(140 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(141) {
+  animation-delay: calc(141 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(142) {
+  animation-delay: calc(142 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(143) {
+  animation-delay: calc(143 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(144) {
+  animation-delay: calc(144 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(145) {
+  animation-delay: calc(145 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(146) {
+  animation-delay: calc(146 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(147) {
+  animation-delay: calc(147 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(148) {
+  animation-delay: calc(148 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(149) {
+  animation-delay: calc(149 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(150) {
+  animation-delay: calc(150 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(151) {
+  animation-delay: calc(151 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(152) {
+  animation-delay: calc(152 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(153) {
+  animation-delay: calc(153 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(154) {
+  animation-delay: calc(154 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(155) {
+  animation-delay: calc(155 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(156) {
+  animation-delay: calc(156 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(157) {
+  animation-delay: calc(157 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(158) {
+  animation-delay: calc(158 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(159) {
+  animation-delay: calc(159 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(160) {
+  animation-delay: calc(160 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(161) {
+  animation-delay: calc(161 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(162) {
+  animation-delay: calc(162 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(163) {
+  animation-delay: calc(163 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(164) {
+  animation-delay: calc(164 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(165) {
+  animation-delay: calc(165 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(166) {
+  animation-delay: calc(166 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(167) {
+  animation-delay: calc(167 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(168) {
+  animation-delay: calc(168 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(169) {
+  animation-delay: calc(169 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(170) {
+  animation-delay: calc(170 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(171) {
+  animation-delay: calc(171 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(172) {
+  animation-delay: calc(172 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(173) {
+  animation-delay: calc(173 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(174) {
+  animation-delay: calc(174 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(175) {
+  animation-delay: calc(175 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(176) {
+  animation-delay: calc(176 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(177) {
+  animation-delay: calc(177 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(178) {
+  animation-delay: calc(178 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(179) {
+  animation-delay: calc(179 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(180) {
+  animation-delay: calc(180 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(181) {
+  animation-delay: calc(181 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(182) {
+  animation-delay: calc(182 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(183) {
+  animation-delay: calc(183 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(184) {
+  animation-delay: calc(184 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(185) {
+  animation-delay: calc(185 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(186) {
+  animation-delay: calc(186 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(187) {
+  animation-delay: calc(187 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(188) {
+  animation-delay: calc(188 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(189) {
+  animation-delay: calc(189 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(190) {
+  animation-delay: calc(190 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(191) {
+  animation-delay: calc(191 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(192) {
+  animation-delay: calc(192 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(193) {
+  animation-delay: calc(193 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(194) {
+  animation-delay: calc(194 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(195) {
+  animation-delay: calc(195 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(196) {
+  animation-delay: calc(196 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(197) {
+  animation-delay: calc(197 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(198) {
+  animation-delay: calc(198 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(199) {
+  animation-delay: calc(199 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:nth-of-type(200) {
+  animation-delay: calc(200 * 4 * 0.1s / 2);
+}
+.menu .wrapper .menu-section .menu-card:hover .check {
+  flex: 0 60px;
+}
+@media (width >= 700px) {
+  .menu .wrapper .menu-section {
+    margin: 0 auto;
+  }
+}
+@media (width <= 700px) {
+  .menu .wrapper .menu-section {
+    width: 100%;
+  }
+}
+.menu .wrapper .cta {
+  position: relative;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  cursor: pointer;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2509803922);
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+.menu .wrapper .cta .overlay {
+  border-radius: 25px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.menu .wrapper .cta p {
+  padding: 15.5px 49px;
+}
+.menu .wrapper .cta:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+.menu .wrapper .cta:hover .overlay {
+  opacity: 0.15;
+}
+@media (width > 1080px) {
+  .menu {
+    margin: 343px auto 0 auto;
+  }
+}
+@media (width <= 1080px) {
+  .menu {
+    margin: 219px auto 0 auto;
+  }
+}
+
+.footer {
+  display: flex;
+  background-color: #353535;
+  gap: 16px;
+}
+.footer .omf-logo {
+  margin-top: auto;
+  width: 138px;
+  height: 27px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #FFFFFF;
+  font-family: Shrikhand, sans-serif;
+}
+@media screen and (min-width: 700px) {
+  .footer .omf-logo {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .footer .omf-logo {
+    font-size: 18px;
+  }
+}
+.footer .link-container {
+  margin-top: auto;
+  display: flex;
+  gap: 7px;
+}
+.footer .link-container .link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: fit-content;
+  line-height: 18.75px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+.footer .link-container .link.style_1 {
+  width: 190px;
+}
+.footer .link-container .link.style_1 p {
+  font-weight: 500;
+}
+.footer .link-container .link.style_2 {
+  width: 130px;
+}
+.footer .link-container .link.style_2 p {
+  font-weight: 400;
+}
+@media (width > 1080px) {
+  .footer {
+    padding: 30px 25px;
+    height: 117px;
+    flex-direction: row-reverse;
+    flex-start: end;
+  }
+}
+@media (width <= 1080px) {
+  .footer {
+    padding: 22px 25px;
+    flex-direction: column;
+  }
+  .footer .link-container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=restaurant.css.map */
