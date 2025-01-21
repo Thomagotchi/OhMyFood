@@ -10,12 +10,9 @@
     <!-- Font Awesome import -->
     <script src="https://kit.fontawesome.com/b78ed65e3d.js" crossorigin="anonymous"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/scss/resets.css">
-    <link rel="stylesheet" href="./styles/scss/resets.css.map">
-    <link rel="stylesheet" defer href="./styles/scss/globals.css">
-    <link rel="stylesheet" defer href="./styles/scss/globals.css.map">
-    <link rel="stylesheet" defer href="./styles/scss/home/home.css">
-    <link rel="stylesheet" defer href="./styles/scss/home/home.css.map">
+    <link rel="stylesheet" href="./styles/resets.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/home.css">
 </head>
 
 <body>
@@ -41,10 +38,10 @@
     </div>
     <div class="spinner-overlay"></div>
     <!-- Content -->
-    <section class="location">
+    <div class="location">
       <i class="fa-solid fa-location-dot"></i>
       <p>Paris, Belleville</p>
-    </section>
+    </div>
     <section class="section-hero">
       <div class="text-container">
         <!-- Hero Title -->                     
@@ -53,13 +50,13 @@
         <p class="text">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
         <!-- CTA Button -->
         <button class="cta">
-          <div class="overlay"></div>
-          <p>Commander</p>
+          <span class="overlay"></span>
+          <span class="text">Explorer nos restaurants</span>
         </button>
       </div>
     </section>
     <section class="section-fonctionnement">
-      <h3 class="section-title">Fonctionnement</h3>
+      <h2 class="section-title">Fonctionnement</h2>
       <ul class="card-container">
         <li class="card">
           <div class="number">1</div>
@@ -80,7 +77,7 @@
     </section>
     <section class="section-restaurants">
       <div class="wrapper">
-        <h3 class="section-title">Restaurants</h3>
+        <h2 class="section-title">Restaurants</h2>
         <div class="card-container">
           <div class="card-wrapper">
             <a class="card" href="./la-palette-du-gout.html">
