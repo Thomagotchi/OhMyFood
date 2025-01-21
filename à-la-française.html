@@ -10,12 +10,9 @@
     <!-- Font Awesome import -->
     <script src="https://kit.fontawesome.com/b78ed65e3d.js" crossorigin="anonymous"></script>
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/scss/resets.css">
-    <link rel="stylesheet" href="./styles/scss/resets.css.map">
-    <link rel="stylesheet" defer href="./styles/scss/globals.css">
-    <link rel="stylesheet" defer href="./styles/scss/globals.css.map">
-    <link rel="stylesheet" defer href="./styles/scss/restaurant/restaurant.css">
-    <link rel="stylesheet" defer href="./styles/scss/restaurant/restaurant.css.map">
+    <link rel="stylesheet" href="./styles/resets.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/restaurant.css">
 </head>
 
 <body>
@@ -27,14 +24,14 @@
     <img src="/assets/images/logo/ohmyfood@2x.svg" alt="Logo OhMyFood" class="logo">
   </header>
   <main>
-    <section class="image-container">
+    <div class="image-container">
       <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-    </section>
+    </div>
     <section class="menu">
       <form  class="wrapper">
         <div class="title-container">
           <!-- Hero Title -->                     
-          <h2 class="title">À la française</h2>
+          <h1 class="title">À la française</h1>
           <!-- Heart -->
           <div class="heart">
             <input type="checkbox" name="restaurant-heart" id="restaurant-heart">
@@ -46,150 +43,141 @@
         </div>
         <div class="menu-section">
           <div class="menu-title">
-            <h5 class="title">ENTRÉES</h5>
+            <h2 class="title">ENTRÉES</h2>
             <div class="underline">
             </div>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="first" name="first">
-            </input>
             <label for="first" class="menu-item">
-              <div class="text-container">
-                <p class="title">Tartare de poulpe acidulé</p>
-                <p class="item-description">Aux zestes d'orange</p>
-              </div>
-              <p class="price">25€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Tartare de poulpe acidulé</span>
+                <span class="item-description">Aux zestes d'orange</span>
+              </span>
+              <span class="price">25€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="second" name="second">
-            </input>
             <label for="second" class="menu-item">
-              <div class="text-container">
-                <p class="title">Velouté de légumes d'antan</p>
-                <p class="item-description">Carotte, panais, topinambour</p>
-              </div>
-              <p class="price">35€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Velouté de légumes d'antan</span>
+                <span class="item-description">Carotte, panais, topinambour</span>
+              </span>
+              <span class="price">35€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="third" name="third">
-            </input>
             <label for="third" class="menu-item">
-              <div class="text-container">
-                <p class="title">Soupe à l'oignon</p>
-                <p class="item-description">Revisitée</p>
-              </div>
-              <p class="price">20€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Soupe à l'oignon</span>
+                <span class="item-description">Revisitée</span>
+              </span>
+              <span class="price">20€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-title">
-            <h5 class="title">PLATS</h5>
+            <h2 class="title">PLATS</h2>
             <div class="underline">
             </div>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="fourth" name="fourth">
-            </input>
             <label for="fourth" class="menu-item">
-              <div class="text-container">
-                <p class="title">Coquilles Saint-Jacques</p>
-                <p class="item-description">Accompagnées d'une purée de panais</p>
-              </div>
-              <p class="price">40€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Coquilles Saint-Jacques</span>
+                <span class="item-description">Accompagnées d'une purée de panais</span>
+              </span>
+              <span class="price">40€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="fifth" name="fifth">
-            </input>
             <label for="fifth" class="menu-item">
-              <div class="text-container">
-                <p class="title">Magret de canard</p>
-                <p class="item-description">Et parmentier de pommes de terre</p>
-              </div>
-              <p class="price">35€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Magret de canard</span>
+                <span class="item-description">Et parmentier de pommes de terre</span>
+              </span>
+              <span class="price">35€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="sixth" name="sixth">
-            </input>
             <label for="sixth" class="menu-item">
-              <div class="text-container">
-                <p class="title">Pigeonneau d’Ille-et-Vilaine</p>
-                <p class="item-description">Sur son lit de gnocchis aux légumes</p>
-              </div>
-              <p class="price">44€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Pigeonneau d’Ille-et-Vilaine</span>
+                <span class="item-description">Sur son lit de gnocchis aux légumes</span>
+              </span>
+              <span class="price">44€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-title">
-            <h5 class="title">DESSERTS</h5>
+            <h2 class="title">DESSERTS</h2>
             <div class="underline">
             </div>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="seventh" name="seventh">
-            </input>
             <label for="seventh" class="menu-item">
-              <div class="text-container">
-                <p class="title">Pétales de violettes glacés</p>
-                <p class="item-description">Et purée de noisettes</p>
-              </div>
-              <p class="price">18€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Pétales de violettes glacés</span>
+                <span class="item-description">Et purée de noisettes</span>
+              </span>
+              <span class="price">18€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="eigth" name="eigth">
-            </input>
             <label for="eigth" class="menu-item">
-              <div class="text-container">
-                <p class="title">Fondant au chocolat</p>
-                <p class="item-description">Revisité</p>
-              </div>
-              <p class="price">22€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Fondant au chocolat</span>
+                <span class="item-description">Revisité</span>
+              </span>
+              <span class="price">22€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
           <div class="menu-card">
             <input type="checkbox" id="ninth" name="ninth">
-            </input>
             <label for="ninth" class="menu-item">
-              <div class="text-container">
-                <p class="title">Millefeuille croustillant</p>
-                <p class="item-description">Myrtilles et pâte d’amande</p>
-              </div>
-              <p class="price">23€</p>
-              <div class="check">
+              <span class="text-container">
+                <span class="title">Millefeuille croustillant</span>
+                <span class="item-description">Myrtilles et pâte d’amande</span>
+              </span>
+              <span class="price">23€</span>
+              <span class="check">
                 <i class="fa-solid fa-circle-check"></i>
-              </div>
+              </span>
             </label>
           </div>
         </div>
         <button class="cta">
-          <div class="overlay"></div>
-          <p>Commander</p>
+          <span class="overlay"></span>
+          <span class="text">Commander</span>
         </button>
       </form >
     </section>
@@ -197,9 +185,9 @@
 
   <!-- Footer du site séparer en trois colonnes -->
   <footer class="footer">
-    <h4 class="omf-logo">
+    <h3 class="omf-logo">
       ohmyfood
-    </h4>
+    </h3>
     <div class="link-container">
       <a class="link style_1" href="">
         <i class="fa-solid fa-utensils fa-xs"></i>
