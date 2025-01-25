@@ -4,7 +4,7 @@
 body {
   height: 100%;
   overflow-y: hidden;
-  animation: disable-scroll 0.1s ease-in-out 4s forwards ;
+  animation: disable-scroll 0.1s ease-in-out 2s forwards ;
 }
 
 .spinner-container {
@@ -24,7 +24,7 @@ body {
     }
   }
 
-  animation: spinner-fade-out 2s ease-in-out 2s forwards ;
+  animation: spinner-fade-out 1s ease-in-out 1s forwards ;
 }
 
 .spinner-overlay {
@@ -35,7 +35,7 @@ body {
   width: 100vw;
   z-index: 1000;
   background-color: black;
-  animation: spinner-fade-out 2s ease-in-out 2s forwards ;
+  animation: spinner-fade-out 1s ease-in-out 1s forwards ;
 }
 
 .header {

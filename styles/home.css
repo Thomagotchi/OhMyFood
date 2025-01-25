@@ -2,12 +2,12 @@
 /*---------- FONTS ----------*/
 @font-face {
   font-family: Shrikhand;
-  src: url(../../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
+  src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf);
   font-display: swap;
 }
 @font-face {
   font-family: Roboto;
-  src: url(../../assets/fonts/Roboto/Roboto-Regular.ttf);
+  src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
   font-display: swap;
 }
 /*---------- FONTS SIZE ----------*/
@@ -79,7 +79,7 @@
 body {
   height: 100%;
   overflow-y: hidden;
-  animation: disable-scroll 0.1s ease-in-out 4s forwards;
+  animation: disable-scroll 0.1s ease-in-out 2s forwards;
 }
 
 .spinner-container {
@@ -87,7 +87,7 @@ body {
   top: calc(50vh - 40px);
   left: calc(50vw - 40px);
   z-index: 2000;
-  animation: spinner-fade-out 2s ease-in-out 2s forwards;
+  animation: spinner-fade-out 1s ease-in-out 1s forwards;
 }
 .spinner-container .spinner {
   position: relative;
@@ -140,46 +140,46 @@ body {
   opacity: 0.1;
   border-radius: 50%;
   background-color: white;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
-  animation: spinner-animation calc(10 * 200ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
+  animation: spinner-animation calc(10 * 100ms) infinite;
 }
 .spinner-container .spinner div:nth-of-type(1) {
-  animation-delay: calc(1 * 0.2s);
+  animation-delay: calc(1 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(2) {
-  animation-delay: calc(2 * 0.2s);
+  animation-delay: calc(2 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(3) {
-  animation-delay: calc(3 * 0.2s);
+  animation-delay: calc(3 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(4) {
-  animation-delay: calc(4 * 0.2s);
+  animation-delay: calc(4 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(5) {
-  animation-delay: calc(5 * 0.2s);
+  animation-delay: calc(5 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(6) {
-  animation-delay: calc(6 * 0.2s);
+  animation-delay: calc(6 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(7) {
-  animation-delay: calc(7 * 0.2s);
+  animation-delay: calc(7 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(8) {
-  animation-delay: calc(8 * 0.2s);
+  animation-delay: calc(8 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(9) {
-  animation-delay: calc(9 * 0.2s);
+  animation-delay: calc(9 * 0.1s);
 }
 .spinner-container .spinner div:nth-of-type(10) {
-  animation-delay: calc(10 * 0.2s);
+  animation-delay: calc(10 * 0.1s);
 }
 
 .spinner-overlay {
@@ -190,7 +190,7 @@ body {
   width: 100vw;
   z-index: 1000;
   background-color: black;
-  animation: spinner-fade-out 2s ease-in-out 2s forwards;
+  animation: spinner-fade-out 1s ease-in-out 1s forwards;
 }
 
 .header {

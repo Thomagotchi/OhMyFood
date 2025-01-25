@@ -34,10 +34,10 @@
 @mixin apply-spinner($item-count) {
     @for $i from 1 through $item-count {
       &:nth-of-type(#{$i}) {
-        animation-delay: calc((#{$i} * 0.2s));
+        animation-delay: calc((#{$i} * 0.1s));
       }
 
-      animation: spinner-animation calc(#{$item-count} * 200ms) infinite;
+      animation: spinner-animation calc(#{$item-count} * 100ms) infinite;
   }
 }
 
